@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@layer base{
+*, *::before, *::after {
+    box-sizing: border-box;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    width: 95%;
+    margin: 0 auto;
+}
+.nav-top{
+    height: 3.6rem;
+    border-radius: 8px;
+
+    & .text-wrapper{
+    margin-top: .9rem;
+    }
+    & .right-mask{
+        transform: rotate(-180deg);
+    }
+}
+
+nav{
+    display: flex;
+    margin-top: 1rem;
+    border-radius: 8px;
+    & .navbar{
+        & .nav-item{
+            align-content: center;
+            border-left: 1px solid #333;
+            padding: 0 1em 0 2em;
+        }
+
+    }
+}
+ @media (width >= 40rem) {
+        nav{
+            & .navbar{
+                & .nav-item{
+                    border: none;
+                    padding-block: .8rem;
+                }
+            }
+        }
+    }
+
+.hero{
+    padding-top: 2rem;
+    & .col{
+        align-content: center;
+        margin:  auto;
+    }
+    
+    & .text-wrapper{
+        width: 40rem;
+        margin: 0 auto;
+        & h1{
+            margin-block: 1rem;
+            
+        }
+    }
+    & .quick-facts{
+        margin-top: 2rem;
+    }
+}
+.pill{
+        padding:5px 10px;
+    }
+.features{
+    width: 90%;
+    margin: 4rem auto;
+    /* & .section-header{
+        & p{
+
+        } 
+    } */
+    & .section-header > *{
+        margin-bottom: .4rem;
+    }
+    & .card-wrapper{
+        margin-top: 4rem;
+    }
+    & .card{
+        padding:0 2em 2em;
+        & .icon{
+            top: -2.5rem;
+            left: 1.5rem;
+        }
+       & h4{
+        margin-top: 4rem;
+       } 
+    }
+}
+
+.faqs{
+    & .accordion{
+        & .question-wrapper{
+            max-height: 0;
+            overflow: hidden;
+            padding:.5rem 1rem 3.2rem ;
+        }
+    }
+}
+
+.footer-nav{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 4rem;
+
+    & ul > li{
+        margin-top: 1rem;
+    }
+    & ul > li:first-child{
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width: 768px){
+    .footer-nav{
+        grid-template-columns: 100%;
+    }
+}
+.input-wrapper{
+    & input,select{
+        display: block;
+        border: 1px solid #000;
+        border-radius: 6px;
+        padding: .5rem 1rem;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+    & label{
+        font-weight: 600;
+        display: block;
+        margin-top: 1.2rem;
+        
+    }
+}
+form{
+    & textarea{
+        resize: none;
+        height: 10rem;
+        width: 100%;
+        margin-top: .6rem;
+        border-radius: 6px;
+    }
+}
+ .swiper-button-next::after,.swiper-button-prev::after {
+    content: "" !important;
+ }
