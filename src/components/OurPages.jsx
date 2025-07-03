@@ -1,14 +1,15 @@
+import SectionHeader from "./SectionHeader"
 
 
 const OurPages = () => {
   return (
     <>
-      <div className="our-pages w-5/6 mx-auto mt-25">
-          <div className="section-header justify-items-center">
-          <div className="pill bg-white border-2 rounded-md inline-block">Exprole More</div>
-          <h2 className="text-4xl my-2">Navigate through our Pages</h2>
-          <p className='w-5/6 text-center my-1 '>Your gateway to discovering a wealth of valuable information about our kindergarten school, Feel free to explore and learn more about the enriching experiences that await your child at our kindergarten school</p>
-        </div>
+      <div className="our-pages w-5/6 mx-auto mt-16">
+      <SectionHeader 
+      pill='Exprole More'
+      title='Navigate through our Pages'
+      text="Your gateway to discovering a wealth of valuable information about our kindergarten school, Feel free to explore and learn more about the enriching experiences that await your child at our kindergarten school"
+      />
 
         <div className="card-wrapper grid mt-6 md:grid-cols-2 gap-8">
           <div className="card border rounded-md shadow-[6px_6px_0px_0px_rgba(0,_0,_0,_0.8)] bg-white p-8  text-center">

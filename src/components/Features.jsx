@@ -1,16 +1,16 @@
 import '../App.css'
-
+import SectionHeader from '../components/SectionHeader'
 function Features(){
     return(
         <>
         <div className="wrapper features">
-            <div className="section-header justify-items-center">
-                <div className="pill bg-white border-2 rounded-lg inline-block px-2 ">Children Deserve Bright Future</div>
-                <h2 className="text-5xl ">Our Benefits</h2>
-                <p className="">
-                With a dedicated team of experienced educators, state-of-the-art facilities, and a comprehensive curriculum,
-                we aim to lay a strong foundation for your child's future.</p>
-            </div>
+            <SectionHeader 
+            pill='Children Deserve Bright Future'
+            title='Our Benefits'
+            text="With a dedicated team of experienced educators, state-of-the-art facilities, and a comprehensive curriculum,
+                we aim to lay a strong foundation for your child's future."
+            />
+
             <div className="card-wrapper grid grid-cols-3 gap-5 gap-y-14 max-sm:grid-cols-1 max-md:grid-cols-2">
             <div className="card border-2 shadow-[6px_6px_0px_0px_rgba(0,_0,_0,_0.8)] bg-white rounded-lg relative">
                 <div className="icon absolute">
