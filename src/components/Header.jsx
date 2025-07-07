@@ -1,5 +1,6 @@
 import '../App.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,11 +46,11 @@ function Header() {
             isOpen ? "flex" : "hidden"
           } md:flex md:flex-row `}>
             <div className="nav-item bg-lt-peach md:ml-auto "><a href="/" className="nav-link">Home</a></div>
-            <div className="nav-item"><a href="/about" className="nav-link">About Us</a></div>
-            <div className="nav-item"><a href="/academics" className="nav-link">Academics</a></div>
-            <div className="nav-item"><a href="/admissions" className="nav-link">Admissions</a></div>
-            <div className="nav-item"><a href="/StudentLife" className="nav-link">Student Life</a></div>
-            <div className="nav-item bg-orange"><a href="/contact" className="nav-link">Contact</a></div>
+            <div className="nav-item"><Link to="/about" className="nav-link">About Us</Link></div>
+            <div className="nav-item"><Link to="/academics" className="nav-link">Academics</Link></div>
+            <div className="nav-item"><Link to="/admissions" className="nav-link">Admissions</Link></div>
+            <div className="nav-item"><Link to="/StudentLife" className="nav-link">Student Life</Link></div>
+            <div className="nav-item bg-orange"><Link to="/contact" className="nav-link">Contact</Link></div>
           </div>
         </nav>
       </header>
