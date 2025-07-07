@@ -3,6 +3,7 @@ import Main from '../components/Main'
 import Cards from '../components/Cards'
 import SectionHeader from '../components/SectionHeader'
 import TimelineItem from '../components/TimelineItem'
+import TeamCard from '../components/TeamCard'
 
 function About() {
   return (
@@ -75,6 +76,53 @@ function About() {
                 year='2005'
                 title='Inception and Growth'
                 text="Established in 2005, our kindergarten school began its journey with a vision to provide a nurturing space for young minds to explore, learn, and grow. Over the next five years, we witnessed significant growth."
+                />
+            </div>
+        </div>
+
+        <div className="w-11/12 mx-auto">
+            <SectionHeader 
+            pill='Our Teachers With Experties'
+            title='Our Team Members'
+            text="At Little Learners Academy, our teaching team is the heart of our educational journey. We take great pride in employing highly qualified and passionate educators who possess a deep understanding of early childhood development. Our teachers create a warm and engaging atmosphere, encouraging curiosity, instilling confidence, and fostering a love for learning."
+            />
+
+            <div className="grid md:grid-cols-2 gap-8 mt-8">
+                <TeamCard 
+                image='/assets/images/sarah.png'
+                profession="Qualification:Bachelor's Degree in Early Childhood Education"  
+                name='Ms. Sarah Anderson'              
+                description="Ms. Sarah is a passionate educator with over 10 years of experience in guiding young minds. Her warm and nurturing approach creates a welcoming classroom environment where children feel comfortable to explore and learn."
+                />
+                <TeamCard 
+                image='/assets/images/david.png'
+                profession="Qualification: Master's Degree in Elementary Education"
+                name='Mr. David Roberts'
+                description="With a strong background in elementary education, Mr. David brings a creative and interactive teaching style to his classroom. His enthusiasm for learning inspires students to ask questions and think critically."
+                />
+                <TeamCard 
+                image='/assets/images/emily.png'
+                profession="Qualification: Diploma in Child Psychology"
+                name="Ms. Emily Hernandez"
+                description="Ms. Emily's expertise in child psychology enables her to understand each child's unique needs and provide individualized support. Her caring nature fosters a strong sense of belonging and confidence in her students."
+                />
+                <TeamCard 
+                image='/assets/images/michael.png'
+                name="Mr. Michael Turner"
+                profession="Qualification: Bachelor's Degree in Physical Education"
+                description="Mr. Michael's passion for physical fitness and sports shines through in his energetic classes. He encourages students to stay active, promoting teamwork and a healthy lifestyle."
+                />
+                <TeamCard 
+                image='/assets/images/jessica.png'
+                name="Ms. Jessica Lee"
+                profession="Qualification: Master's Degree in Special Education"
+                description="Ms. Jessica's specialization in special education allows her to create an inclusive and supportive learning environment for all students. She is dedicated to helping every child reach their full potential."
+                />
+                <TeamCard 
+                image='/assets/images/william.png'
+                name="Mr. William Parker"
+                profession="Qualification: Bachelor's Degree in Fine Arts"
+                description="Mr. William's background in fine arts brings creativity and imagination to his classroom. Through art projects and activities, he nurtures the artistic expression and self-confidence of his students."
                 />
             </div>
         </div>
