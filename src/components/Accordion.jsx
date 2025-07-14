@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const Accordion = ({title, answer}) => {
     const [accordionOpen, setAccordionOpen] = useState(false);
   return (
-    <div className={`p-2 border rounded-md ${accordionOpen ? 'bg-white' : 'bg-[#ffefef]'}`}>
+    <div className={`p-2 border-2 rounded-lg ${accordionOpen ? 'bg-white' : 'bg-[#ffefef]'}`}>
       <button 
       onClick={() => setAccordionOpen(!accordionOpen)}
       className='flex justify-between w-full'>
