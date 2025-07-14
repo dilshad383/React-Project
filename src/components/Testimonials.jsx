@@ -11,6 +11,23 @@ import 'swiper/css/pagination';
 import SectionHeader from './SectionHeader';
 
 function Testimonials(){
+    const swiperCards = [
+        {
+            img: '/assets/icons/jennifer.png',
+            name: 'Jennifer B',
+            text: 'Little Learners Academy has been a second home for my child. The caring staff and engaging programs have made her excited to go to school every day!'
+        },
+        {
+            img: '/assets/icons/david.png',
+            name: 'David K',
+            text: 'Little Learners Academy has been a second home for my child. The caring staff and engaging programs have made her excited to go to school every day!'
+        },
+        {
+            img: '/assets/icons/emily.png',
+            name: 'Emily L',
+            text: 'Little Learners Academy has been a second home for my child. The caring staff and engaging programs have made her excited to go to school every day!'
+        },
+    ]
     return(
         <>
         <div className="wrapper">
@@ -53,37 +70,21 @@ function Testimonials(){
                     },
                     }}
                 >
-                    <SwiperSlide>
-                        <div className="card border-2 shadow-[6px_6px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-md py-10 bg-white">
+                    {
+                    swiperCards.map((card, index) => {
+                        return <SwiperSlide key={index}>
+                            <div className="card border-2 shadow-[6px_6px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-md py-10 bg-white">
                             <div className="card-header justify-items-center">
-                                <img className='my-3' src="/assets/icons/jennifer.png" alt="" />
-                                <h4>Jennifer B</h4>
+                                <img className='my-3' src={card.img} alt="" />
+                                <h4>{card.name}</h4>
                                 <img className='my-2' src="/assets/icons/stars.png" alt="" />
                             </div>
-                            <p className='px-10 mt-6 text-center'>Little Learners Academy has been a second home for my child. The caring staff and engaging programs have made her excited to go to school every day!</p>
+                            <p className='px-10 mt-6 text-center'>{card.text}</p>
                         </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card border-2 shadow-[6px_6px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-md py-10 bg-white">
-                            <div className="card-header justify-items-center">
-                                <img className='my-3' src="/assets/icons/david.png" alt="" />
-                                <h4>David K</h4>
-                                <img className='my-2' src="/assets/icons/stars.png" alt="" />
-                            </div>
-                            <p className='px-10 mt-6 text-center'>Little Learners Academy has been a second home for my child. The caring staff and engaging programs have made her excited to go to school every day!</p>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card border-2 shadow-[6px_6px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-md py-10 bg-white">
-                            <div className="card-header justify-items-center">
-                                <img className='my-3' src="/assets/icons/emily.png" alt="" />
-                                <h4>Emily L</h4>
-                                <img className='my-2' src="/assets/icons/stars.png" alt="" />
-                            </div>
-                            <p className='px-10 mt-6 text-center'>Little Learners Academy has been a second home for my child. The caring staff and engaging programs have made her excited to go to school every day!</p>
-                        </div>
-                    </SwiperSlide>
-                    
+                        </SwiperSlide>
+                            }
+                        )
+                    }
                 </Swiper>
             </div>
         </div>

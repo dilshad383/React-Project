@@ -3,7 +3,7 @@ import '../App.css'
 const Footer = () => {
   return (
     <div className='bg-[#ffefef] py-10'>
-      <div className="footer border rounded-md shadow-[6px_6px_0px_0px_rgba(0,_0,_0,_0.8)]  w-11/12 mx-auto bg-white">
+      <div className="footer border rounded-md shadow-[6px_6px_0px_0px_rgba(0,_0,_0,_0.8)]  w-[97%] mx-auto bg-white">
         <div className="footer-nav  px-10 pt-20 pb-10">
             <div className="">
                 <div className="footer-logo">
