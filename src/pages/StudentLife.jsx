@@ -4,6 +4,45 @@ import Main from "../components/Main"
 import SectionHeader from "../components/SectionHeader"
 
 const StudentLife = () => {
+  const card = [
+    {
+      padding: 'p-4',
+      icon: '/assets/icons/light.png',
+      title: 'Sports and Athletics',
+      description: "Students can participate in various sports, from soccer and basketball to gymnastics and yoga. Sports help promote teamwork, physical fitness, and a sense of discipline."
+    },
+    {
+      padding: 'p-5',
+      icon: '/assets/icons/brush.png',
+      title: 'Art and Creativity',
+      description: 'Our art classes and creative workshops provide a platform for students to express their creativity through painting, drawing, and other artistic forms.'
+    },
+    {
+      padding: 'py-6',
+      icon: '/assets/icons/music.png',
+      title: 'Music and Performing Arts',
+      description: 'Our art classes and creative workshops provide a platform for students to express their creativity through painting, drawing, and other artistic forms.'
+    },
+    {
+      padding: 'py-4',
+      icon: '/assets/icons/puzzle.png',
+      title: 'Language Clubs',
+      description: "Language clubs offer an opportunity for students to immerse themselves in different languages and cultures, fostering global awareness."
+    },
+    {
+      padding: 'py-4',
+      icon: '/assets/icons/beaker.png',
+      title: 'Science Club',
+      description: "The science club allows young scientists to explore the wonders of science through fun experiments and hands-on learning."
+    },
+    {
+      padding: 'py-6',
+      icon: '/assets/icons/spark.png',
+      title: 'Cooking and Culinary Arts',
+      description: "Cooking classes introduce students to the joys of preparing and tasting delicious and healthy meals."
+    },
+
+  ]
   return (
     <div className="bg-[#ffefef] py-12">
         <Main 
@@ -20,42 +59,20 @@ const StudentLife = () => {
             />
 
             <div className="card-wrapper mt-8 grid md:grid-cols-3 gap-x-8 gap-y-8">
-                <Card 
-                padding='p-4'
-                icon='/assets/icons/light.png'
-                title='Sports and Athletics'
-                description="Students can participate in various sports, from soccer and basketball to gymnastics and yoga. Sports help promote teamwork, physical fitness, and a sense of discipline."
-                />
-                <Card 
-                padding='p-6'
-                icon='/assets/icons/brush.png'
-                title='Art and Creativity'
-                description='Our art classes and creative workshops provide a platform for students to express their creativity through painting, drawing, and other artistic forms.'
-                />
-                <Card 
-                padding='py-6'
-                icon='/assets/icons/music.png'
-                title='Music and Performing Arts'
-                description='Students can discover their musical talents through singing, playing musical instruments, and participating in drama and theater performances.'
-                />
-                <Card 
-                padding='p-4'
-                icon='/assets/icons/puzzle.png'
-                title='Language Clubs'
-                description='Language clubs offer an opportunity for students to immerse themselves in different languages and cultures, fostering global awareness.'
-                />
-                <Card 
-                padding='p-4'
-                icon='/assets/icons/beaker.png'
-                title='Science Club'
-                description='The science club allows young scientists to explore the wonders of science through fun experiments and hands-on learning.'
-                />
-                <Card 
-                padding='p-6'
-                icon='/assets/icons/spark.png'
-                title='Cooking and Culinary Arts'
-                description='Cooking classes introduce students to the joys of preparing and tasting delicious and healthy meals.'
-                />
+              {
+                card.map((activity, index) => {
+                  return (
+                    <Card 
+                    key={index}
+                    padding={activity.padding}
+                    icon={activity.icon}
+                    title={activity.title}
+                    description={activity.description}
+                    />
+                  )
+                  }
+                )
+              }
             </div>
         </div>
 
